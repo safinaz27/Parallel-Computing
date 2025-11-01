@@ -26,9 +26,9 @@ public class ThreadingExamples {
         // 1. Run Example 1: Extending Thread
         Thread thread1 = new MyThread();
         System.out.println("Starting thread t1 (MyThread)...");
-        thread1.start(); // Invokes the run() method of MyThread asynchronously
+        thread1.start(); 
 
-        // Add a small delay for cleaner console output
+
         try {
             Thread.sleep(10);
         } catch (InterruptedException e) {
@@ -37,9 +37,9 @@ public class ThreadingExamples {
 
         // 2. Run Example 2: Implementing Runnable
         Runnable task = new MyTask();
-        Thread thread2 = new Thread(task); // Thread is created using the Runnable task
+        Thread thread2 = new Thread(task); 
         System.out.println("Starting thread t2 (MyTask)...");
-        thread2.start(); // Invokes the run() method of MyTask asynchronously
+        thread2.start(); 
 
         System.out.println("Main Thread finished starting both custom threads.");
         // The program will exit once the main thread and all started custom threads finish execution.
