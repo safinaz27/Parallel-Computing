@@ -1,0 +1,7 @@
+# Ignore compiled class files
+*.class
+
+# Ignore IDE build folders
+/out/
+/bin/
+/target/
