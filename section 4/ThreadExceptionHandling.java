@@ -11,7 +11,7 @@ public class ThreadExceptionHandling {
         exception.printStackTrace(new PrintWriter(sw));
         String stackTrace = sw.toString();
         
-        System.err.println("\n--- 🌐 GLOBAL HANDLER: Uncaught Exception ---");
+        System.err.println("\n--- GLOBAL HANDLER: Uncaught Exception ---");
         System.err.println("Thread: " + thread.getName());
         System.err.println("Error: " + exception.getMessage());
         System.err.println("Stack Trace:\n" + stackTrace);
@@ -52,7 +52,7 @@ public class ThreadExceptionHandling {
 
         // Set the thread-specific handler
         t2_specific.setUncaughtExceptionHandler((thread, exception) -> {
-            System.err.println("\n--- ⚠️ SPECIFIC HANDLER: Uncaught Exception ---");
+            System.err.println("\n--- SPECIFIC HANDLER: Uncaught Exception ---");
             System.err.println("Thread: " + thread.getName());
             System.err.println("Message: " + exception.getMessage());
             System.err.println("------------------------------------------\n");
